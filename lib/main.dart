@@ -76,7 +76,15 @@ class _MyHomePageState extends State<MyHomePage>
               alignment: Alignment.center,
               child: FlatButton(
                 onPressed: () {
-                  _controller.forward();
+                  if(_controller.status == AnimationStatus.dismissed){
+                  _controller.forward();}
+                  else if(_controller.status == AnimationStatus.forward){
+                  handleAnimation();}
+                  else if(_controller.status == AnimationStatus.completed){
+                  afterAnimationOver();}
+                  else{
+                    print(_controller.value);
+                  }
                 },
                 child: Icon(Icons.attach_file),
               ),
