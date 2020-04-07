@@ -76,13 +76,13 @@ class _MyHomePageState extends State<MyHomePage>
               alignment: Alignment.center,
               child: FlatButton(
                 onPressed: () {
-                  if(_controller.status == AnimationStatus.dismissed){
-                  _controller.forward();}
-                  else if(_controller.status == AnimationStatus.forward){
-                  handleAnimation();}
-                  else if(_controller.status == AnimationStatus.completed){
-                  afterAnimationOver();}
-                  else{
+                  if (_controller.status == AnimationStatus.dismissed) {
+                    _controller.forward();
+                  } else if (_controller.status == AnimationStatus.forward) {
+                    handleAnimation();
+                  } else if (_controller.status == AnimationStatus.completed) {
+                    afterAnimationOver();
+                  } else {
                     print(_controller.value);
                   }
                 },
@@ -100,36 +100,39 @@ class _MyHomePageState extends State<MyHomePage>
                       color: Colors.grey[200],
                     ),
                     Container(
-                      padding: EdgeInsets.only(top: 65),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          MaterialButton(   
-                            padding: EdgeInsets.all(12.0),
-                            child: new Icon(Icons.file_upload, color: Colors.white, size: 28.0),
-                            onPressed: () {},
-                            shape: new CircleBorder(),
-                            elevation: 2.0,
-                            color: Colors.black,
-                          ),
-                           MaterialButton(
-                            padding: EdgeInsets.all(12.0),
-                            child: new Icon(Icons.image, color: Colors.white, size: 28.0),
-                            onPressed: () {},
-                            shape: new CircleBorder(),
-                            elevation: 2.0,
-                            color: Colors.black,
-                          ),
-                           MaterialButton(
-                            padding: EdgeInsets.all(12.0),
-                            child: new Icon(Icons.videocam, color: Colors.white, size: 28.0),
-                            onPressed: () {},
-                            shape: new CircleBorder(),
-                            elevation: 2.0,
-                            color: Colors.black,
-                          ),
-                      ],)
-                    ),
+                        padding: EdgeInsets.only(top: 65),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            MaterialButton(
+                              padding: EdgeInsets.all(12.0),
+                              child: new Icon(Icons.file_upload,
+                                  color: Colors.white, size: 28.0),
+                              onPressed: () {},
+                              shape: new CircleBorder(),
+                              elevation: 2.0,
+                              color: Colors.black,
+                            ),
+                            MaterialButton(
+                              padding: EdgeInsets.all(12.0),
+                              child: new Icon(Icons.image,
+                                  color: Colors.white, size: 28.0),
+                              onPressed: () {},
+                              shape: new CircleBorder(),
+                              elevation: 2.0,
+                              color: Colors.black,
+                            ),
+                            MaterialButton(
+                              padding: EdgeInsets.all(12.0),
+                              child: new Icon(Icons.videocam,
+                                  color: Colors.white, size: 28.0),
+                              onPressed: () {},
+                              shape: new CircleBorder(),
+                              elevation: 2.0,
+                              color: Colors.black,
+                            ),
+                          ],
+                        )),
                   ],
                 );
               },
@@ -139,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage>
   }
 
   void handleAnimation() {
-    //need the controller to show or [visible=true] the three overlaying stacked buttons while animation  
+    //need the controller to show or [visible=true] the three overlaying stacked buttons while animation
   }
 
   void afterAnimationOver() {
