@@ -3,6 +3,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
+import 'package:magnifier/magnifier.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,12 +11,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Handler',
-      theme: ThemeData(
-        primarySwatch: Colors.pink,
+    return Magnifier(
+      enabled: true,
+      scale: 2.0,
+      child: MaterialApp(
+        title: 'Handler',
+        theme: ThemeData(
+          primarySwatch: Colors.pink,
+        ),
+        home: MyHomePage(title: 'Handler Demo'),
       ),
-      home: MyHomePage(title: 'Handler Demo'),
     );
   }
 }
